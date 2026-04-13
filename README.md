@@ -1,20 +1,55 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# dafu
 
-# Run and deploy your AI Studio app
+当前结构：
 
-This contains everything you need to run your app locally.
+- `frontend/`: uni-app 前端（已切换为微信小程序工程）
+- `server/`: API 服务（Express）
 
-View your app in AI Studio: https://ai.studio/apps/38572bb8-5c83-4bb5-bc67-45a80d18a6df
+## 本地开发（小程序）
 
-## Run Locally
+前置条件：Node.js 18+
 
-**Prerequisites:**  Node.js
+1. 安装依赖
 
+```bash
+npm run install:all
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+2. 配置环境变量
+
+```bash
+cp frontend/.env.example frontend/.env.local
+cp server/.env.example server/.env
+```
+
+3. 一键启动前后端（推荐）
+
+```bash
+npm run dev
+```
+
+4. 或分别启动（可选）
+
+```bash
+npm run dev:frontend
+npm run dev:server
+```
+
+5. 打开微信开发者工具
+- 导入目录：`frontend/dist/dev/mp-weixin`
+- 在微信公众平台配置后端 `request` 合法域名（HTTPS）
+
+## 页面结构（uni 多页面）
+
+- 首页入口：`pages/index/index`
+- 今日指引：`pages/daily/index`
+- 塔罗占卜：`pages/tarot/index`
+- 星盘解析：`pages/astro/index`
+
+## 常用命令
+
+```bash
+npm run build:frontend
+npm run lint:frontend
+npm run start:server
+```

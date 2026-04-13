@@ -1,0 +1,112 @@
+$bg-color: #f7f2e7;
+$card-bg: #fff8ef;
+$text-main: #5a4a3b;
+$text-sub: #8b7a66;
+$accent: #c39254;
+$line: #eadbc6;
+
+:root,
+page {
+  --dafu-bg: #f7f2e7;
+  --dafu-card: #fff8ef;
+  --dafu-text: #5a4a3b;
+  --dafu-text-soft: #8b7a66;
+  --dafu-accent: #c39254;
+  --dafu-line: #eadbc6;
+}
+
+page {
+  background: var(--dafu-bg);
+  color: var(--dafu-text);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+view,
+text,
+button,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+/* H5 fallback: align uni tags with mini-program layout semantics */
+view,
+scroll-view,
+swiper,
+swiper-item,
+movable-area,
+movable-view,
+cover-view {
+  display: block;
+}
+
+text {
+  display: inline;
+}
+
+image,
+cover-image {
+  display: inline-block;
+  max-width: 100%;
+}
+
+scroll-view[scroll-y] {
+  overflow-y: auto;
+}
+
+scroll-view[scroll-x] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: 1.2;
+  border-radius: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button::after {
+  border: 0;
+}
+
+button[disabled] {
+  opacity: 0.55;
+}
+
+input,
+textarea {
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: 1.4;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(90, 74, 59, 0.55);
+}
+
+.uni-input-placeholder,
+.uni-textarea-placeholder {
+  color: rgba(90, 74, 59, 0.55) !important;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
