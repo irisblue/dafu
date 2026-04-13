@@ -11,7 +11,7 @@
     "preview:frontend": "npm run dev:h5 --prefix frontend",
     "lint:frontend": "npm run lint --prefix frontend",
     "start:server": "npm run start --prefix server",
-    "install:all": "npm install --prefix frontend && npm install --prefix server",
+    "install:all": "npm install && npm install --prefix frontend && npm install --prefix server",
     "start": "npm run start:server",
     "lint": "npm run lint:frontend",
     "clean": "npm run clean:frontend",
